@@ -7,5 +7,5 @@ import { FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'my-app';
-  myforms = new FormGroup({username : new FormControl() })
+  public myforms = new FormGroup({username : new FormControl() })
 }
