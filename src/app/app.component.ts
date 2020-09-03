@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule, FormControl, RequiredValidator, Validators, MinLengthValidator } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,5 +7,8 @@ import { FormGroup, ReactiveFormsModule, FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'my-app';
-  public myforms = new FormGroup({username : new FormControl() })
+  // public inputs = new FormControl('',[Validators.required]);
+
+  public input2 = new FormGroup({username : new FormControl('',[Validators.required, Validators.minLength(3),Validators.pattern('[a-zA-Z]*')]),
+    password: new FormControl('', [Validators.required,Validators.minLength(3), ])});
 }

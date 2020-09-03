@@ -1,0 +1,60 @@
+<div class="container-fluid" style="height: 100vh;
+background-image: url(assets/sbac.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;margin: 0px;">
+
+  <div class="row  " style="height: 100vh;justify-content: center;align-items: center;">
+    <div class="col-5" [formGroup]="login1" style="height: 250px;background-color:grey; opacity:0.8; ">
+      <div class="row " style="justify-content: center;align-items: center;">
+        <div class="col" style="display: flex;justify-content: center;align-items: center;">
+          Fitness Experts
+        </div>
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="alert">
+        invalid user name and password
+      </div>
+      <div class="alert alert-primary" role="alert1" *ngIf="alert1">
+        valid user name and password
+      </div>
+      <div class="row mt-1  " style="justify-content: start;">
+        <div class="col-7 m-0 p-0" style="display: flex;justify-content: start;">
+          
+          <input type="text" class="form-control form-control-sm m-1 p-1 " formControlName="username"
+            placeholder="username">
+
+        </div>
+        <div class="col-5 m-0 p-1" style="display: flex;justify-content: start;"><span
+            style="font-size: small;padding: 0px;" class="m-0">eg acs123</span></div>
+      </div>
+      
+     
+      <div class="row mt-1  " style="justify-content: start;">
+        <div class="col-7 m-0 p-0" style="display: flex;justify-content: start;">
+
+          <input type="text" class="form-control form-control-sm m-1 p-1 " formControlName="password"
+            placeholder="Password">
+
+        </div>
+        <div class="col-5 m-0 p-1" style="display: flex;justify-content: start;"><span
+            style="font-size: small;padding: 0px;" class="m-0">min 8 char max 20</span></div>
+      </div>
+      <div class="row" style="justify-content: center;align-items: center;">
+        <div class="col" style="justify-content: center;align-items: center;display: flex;">
+          <button type="button" class="btn btn-primary" [disabled]="!login1.valid" (click)="login2()">Sine
+            Up</button>
+        </div>
+      </div>
+      <div class="row" style="justify-content: center;align-items: center;display: flex; flex-direction: row; ">
+        <div class="col" style="justify-content: center;align-items: center;display: flex;">
+          <div>Already Have an Account ? </div>
+          <div> <a href=""> Login </a> </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
