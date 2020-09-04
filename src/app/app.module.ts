@@ -9,6 +9,11 @@ import { SineupComponent } from './sineup/sineup.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AdminhomeComponent } from './adminhome/adminhome.component';
+import { AddpakageComponent } from './addpakage/addpakage.component';
+import { ViewpakageComponent } from './viewpakage/viewpakage.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { RemovepakageComponent } from './removepakage/removepakage.component';
+import { UpdatepakageComponent } from './updatepakage/updatepakage.component';
 
 
 @NgModule({
@@ -18,6 +23,11 @@ import { AdminhomeComponent } from './adminhome/adminhome.component';
     LoginComponent,
     PagenotfoundComponent,
     AdminhomeComponent,
+    AddpakageComponent,
+    ViewpakageComponent,
+    AboutusComponent,
+    RemovepakageComponent,
+    UpdatepakageComponent,
     
   ],
   imports: [

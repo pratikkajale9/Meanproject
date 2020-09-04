@@ -1,3 +1,34 @@
-<h1>
-    HELLO WORD
-</h1>
+<div class="container-fluid">
+    <div class="row bg-primary" style="height: 90px;align-items: center;justify-content: center;" >
+        <div class="col-6" style="color: blanchedalmond;">
+            Fitness Experts !!!!
+        </div>
+         <div class="col" style="color: blanchedalmond;">
+         <a routerLink="/admin/viewpakage"><button type="button" class="btn btn-outline-dark">View Pakages</button></a>
+         </div>
+          <div class="col" style="color: blanchedalmond;">
+          <a routerLink="/admin/addpakage"><button type="button" class="btn btn-block btn-outline-dark">Add
+              Pakage</button></a>
+          </div>
+           <div class="col" style="color: blanchedalmond;">
+         <a routerLink="/admin/removepakage"><button type="button" class="btn btn-outline-dark">Remove
+             Pakages</button></a>
+           </div>
+            <div class="col" style="color: blanchedalmond;">
+           <a routerLink="/admin/updatepakage"><button type="button" class="btn btn-outline-dark">Update
+               Pakage</button></a>
+            </div>
+            <div class="col" style="color: blanchedalmond;">
+              <button type="button" class="btn btn-outline-dark">Log out</button>
+            </div>
+
+
+    </div>
+    <div class="row bg-secondary">
+        <div class="col " style="display: flex;align-items: center;justify-content: center;height: 40px;">
+         Welcome To the Admin Pannel
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

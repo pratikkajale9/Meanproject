@@ -41,14 +41,13 @@ background-size: cover;margin: 0px;">
       </div>
       <div class="row" style="justify-content: center;align-items: center;">
         <div class="col" style="justify-content: center;align-items: center;display: flex;">
-          <button type="button" class="btn btn-primary" [disabled]="!login1.valid" (click)="login2()">Sine
-            Up</button>
+          <button type="button" class="btn btn-primary" [disabled]="!login1.valid" (click)="login2()">Login</button>
         </div>
       </div>
       <div class="row" style="justify-content: center;align-items: center;display: flex; flex-direction: row; ">
         <div class="col" style="justify-content: center;align-items: center;display: flex;">
-          <div>Already Have an Account ? </div>
-          <div> <a href=""> Login </a> </div>
+          <div>Not  Account ? </div>
+          <div> <a routerLink="/sineup"> sine up now </a> </div>
 
         </div>
       </div>

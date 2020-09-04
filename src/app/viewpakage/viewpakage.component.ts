@@ -4,19 +4,21 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { from } from 'rxjs';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-adminhome',
-  templateUrl: './adminhome.component.html',
-  styleUrls: ['./adminhome.component.css']
+  selector: 'app-viewpakage',
+  templateUrl: './viewpakage.component.html',
+  styleUrls: ['./viewpakage.component.css']
 })
-export class AdminhomeComponent implements OnInit {
+export class ViewpakageComponent implements OnInit {
 
   constructor(private http: HttpClient, private fb: FormBuilder, private router: Router ) { }
 
   ngOnInit(): void {
-    if (!sessionStorage.getItem('sid')){
-        this.router.navigate(['login']);
-    }
   }
- 
-
+   public list : any = [];
+   async getpakageedata(){
+     const url = "http://localhost:3000/displaypakage";
+     const result = await this.http.get(url).toPromise();
+     console.log(result);
+     this.list = result;
+   }
 }

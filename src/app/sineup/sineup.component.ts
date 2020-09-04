@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormControl, FormGroup, Validators ,ReactiveFormsModule, FormBuilder} from '@angular/forms'
+import { FormControl, FormGroup, Validators ,ReactiveFormsModule, FormBuilder} from '@angular/forms';
 @Component({
   selector: 'app-sineup',
   templateUrl: './sineup.component.html',
@@ -21,7 +21,7 @@ export class SineupComponent implements OnInit {
   ngOnInit(): void {
   }
   adduser1 = async () =>{
-    let url = "http://localhost:3002/adduser";
+    let url = "http://localhost:3000/adduser";
     let data = this.sineupp.value;
      await this.http.post(url,data).toPromise();
   }

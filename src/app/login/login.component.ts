@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
         if (resultss.message === "success post"){
           this.alert = false;
           this.alert1 = true;
+          sessionStorage.setItem('sid','true');
           this.router.navigate(['admin']);  
         }
         if (resultss.message === "failure post") {

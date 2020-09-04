@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row mt-1" style="align-items: center;justify-content: center;" >
+        <div class="col bg-secondary" style="display: flex;align-items: center;justify-content: center;" >
+            All Pakages displayed here
+        </div>
+        
+    </div>
+    <div class="row mt-1" style="justify-content: center;align-items: center;">
+        <div class="col" style=" display: flex;justify-content: center;align-items: center;">
+         <button class="btn-primary" (click)="getpakageedata()"> click here get all pakage </button>
+        </div>
+    </div>
+            
+    <div class="border border-secondary mt-1 mb-1" style="display: flex;
+    justify-content: center;align-items: center;height: 100px;flex-direction: column;" 
+    *ngFor="let item of list" >
+    <div> Pakage Name = {{item.pakageid}}</div>
+    <div> Pakage Name = {{item.Pakage_Name}}</div>
+     <div> Pakage Price =  {{item.Pakage_Price}}</div>
+      <div>Pakage Facelities = {{item.Pakage_Facelities}}</div>
+   
+
+    </div>
+
+
+
+</div>
