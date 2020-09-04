@@ -10,12 +10,18 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { RemovepakageComponent } from './removepakage/removepakage.component';
 import { UpdatepakageComponent } from './updatepakage/updatepakage.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { SelectpakageComponent } from './selectpakage/selectpakage.component';
+
+import { ViveyourpakageComponent } from './viveyourpakage/viveyourpakage.component';
 const routes: Routes =[ {path:"login",component:LoginComponent},{path:"sineup",component:SineupComponent},
   { path: "", redirectTo: "/userlogin", pathMatch: "full" }, { path: "admin", component: AdminhomeComponent,children:[{path:"addpakage",
-component:AddpakageComponent},{path:"viewpakage",component:ViewpakageComponent},{path:"abboutus",component:AboutusComponent},{path:"removepakage",
+component:AddpakageComponent},{path:"viewpakage",component:ViewpakageComponent},{path:"removepakage",
       component: RemovepakageComponent
     }, { path: "updatepakage", component: UpdatepakageComponent }]
-  }, { path: "userlogin", component: UserloginComponent },
+  }, { path: "userlogin", component: UserloginComponent }, { path: "userhome", component: UserhomeComponent,children:[
+
+ {path:"selectpakage",component:SelectpakageComponent},{path:"viewallpakage",component:ViewpakageComponent},{path:"viewyourpakage",component:AboutusComponent} ] },
   {path:"**",component:PagenotfoundComponent}
  ];
 

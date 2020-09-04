@@ -1,1 +1,20 @@
-<p>selectpakage works!</p>
+<div class="container-flud">
+  <div class="row border-secondary mt-5 " style="align-items: center;justify-content: center; ">
+
+    <div class="col-4" style="display: flex;justify-content: center;align-items: center;border: 2px;
+        border-style: solid;
+    border-color: gray; flex-direction: column;">
+      Enter id of pakage to selet <br>
+
+      <input type="text" class="form-control form-control-sm mt-2" placeholder="Enter id here" [formControl]="pid">
+      <button type="button" class="btn btn-primary mt-2 mb-2" [disabled]="!pid.valid" (click)="rpakage()">Add 
+        pakage</button>
+      <div class="alert alert-primary" role="alert" *ngIf="alert1">
+        pakage added sucessfully
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="alert2">
+        Error Plz cheack id
+      </div>
+    </div>
+  </div>
+</div>

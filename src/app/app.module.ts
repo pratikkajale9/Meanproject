@@ -17,7 +17,7 @@ import { UpdatepakageComponent } from './updatepakage/updatepakage.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { UserhomeComponent } from './userhome/userhome.component';
 import { SelectpakageComponent } from './selectpakage/selectpakage.component';
-import { VivepakageComponent } from './vivepakage/vivepakage.component';
+
 import { ViveyourpakageComponent } from './viveyourpakage/viveyourpakage.component';
 
 
@@ -36,7 +36,7 @@ import { ViveyourpakageComponent } from './viveyourpakage/viveyourpakage.compone
     UserloginComponent,
     UserhomeComponent,
     SelectpakageComponent,
-    VivepakageComponent,
+  
     ViveyourpakageComponent,
     
   ],

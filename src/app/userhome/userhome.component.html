@@ -1,1 +1,27 @@
-<p>userhome works!</p>
+<div class="fluid-container">
+    <div class="row bg-secondary">
+        <div class="col-6  ml-1" style="height: 40px; display: flex;align-items: center;color: white;
+        font-size: medium;  " >
+        fitness Experts !!! 
+        </div>
+        <a routerLink="/userhome/viewallpakage" style="display: flex;align-items: center;justify-content: center;" >
+          <div class="col" style="display: flex;align-items: center;">
+            <button class="btn-warning btn-sm">view all pakages</button>
+          </div>
+        </a>
+       <a routerLink="/userhome/selectpakage" style="display: flex;align-items: center;justify-content: center;" >
+            <div class="col" style="display: flex;align-items: center;">
+              <button class="btn-warning btn-sm">Select Pakages</button>
+            </div>
+        </a>
+        
+        <div class="col" style="display: flex;align-items: center;">
+            <button class="btn-warning btn-sm">Your Pakages</button>
+        </div>
+        <div class="col" style="display: flex;align-items: center;">
+            <button class="btn-warning btn-sm">Logout</button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+
