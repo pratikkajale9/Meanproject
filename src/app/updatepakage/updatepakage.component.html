@@ -1,1 +1,56 @@
-<p>updatepakage works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mt-1 bg-success" style="justify-content: center; align-items: center;display: flex; ">
+      Update a pakage
+    </div>
+  </div>
+  <div class="row" style="align-items: center;justify-content: center;">
+    <div class="col-10" [formGroup]="addpakage" style="height: 100px;">
+      <div class="row">
+        <div class="col">
+          <div style="font-size: x-large;">Pakage Name <input type="text" formControlName="PakageName"
+              class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+              placeholder="pakage Name">
+          </div>
+          <div style="font-size: x-large;">Pakage id (Which you want to update) <input type="text" formControlName="Pakageid" class="form-control"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="pakage Name">
+          </div>
+          <div style="font-size: x-large;">Pakage Duraction<input type="text" formControlName="Duraction"
+              class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+              placeholder="pakage Name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="font-size: x-large;">Pakage Price <input type="text" formControlName="PakagePrice"
+              class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+              placeholder="pakage Name">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="font-size: x-large;">Pakage Facelities <input type="text" formControlName="PakageFacelities"
+              class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"
+              placeholder="pakage Name">
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col" style="display: flex;align-items: center;justify-content: center;">
+          <button type="button" [disabled]="!addpakage.valid" (click)="update1()"
+            class="btn btn-dark btn-lg  ">Submit</button>
+
+        </div>
+      </div>
+      <div class="alert alert-primary mt-2 " role="alert" *ngIf="alert1"
+        style="display: flex; align-items: center;justify-content: center;">
+        Pakage Updated sucessfully !
+      </div>
+      <div class="alert alert-danger" role="alert" *ngIf="alert2">
+        Pakage NOT Updated cheack id !
+      </div>
+    </div>
+  </div>
+</div>

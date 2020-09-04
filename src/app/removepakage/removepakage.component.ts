@@ -18,14 +18,18 @@ export class RemovepakageComponent implements OnInit {
   public alert2 = false;
   public rpakage = async ()=>{
     let url = "http://localhost:3000/rpakage";
-    let data = this.pid.value;
-    let results: any = await this.http.post(url, data).toPromise();
+    let data : number  = this.pid.value;
+    let id = {"id" : data};
+    let results: any = await this.http.post(url, id).toPromise();
     console.log(results);
     if (results.message === "success post") {
+      this.alert2 = false;
       this.alert1 = true;
     }
     else {
+      this.alert1 = false;
       this.alert2 = true;
+      
     }
   }
   }

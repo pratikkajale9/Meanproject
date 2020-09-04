@@ -17,6 +17,9 @@ export class AdminhomeComponent implements OnInit {
         this.router.navigate(['login']);
     }
   }
- 
+ logoutp(){
+   sessionStorage.removeItem('sid');
+   this.router.navigate(['login']);
+ }
 
 }

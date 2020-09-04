@@ -9,11 +9,13 @@ import { ViewpakageComponent } from './viewpakage/viewpakage.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RemovepakageComponent } from './removepakage/removepakage.component';
 import { UpdatepakageComponent } from './updatepakage/updatepakage.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 const routes: Routes =[ {path:"login",component:LoginComponent},{path:"sineup",component:SineupComponent},
-  { path: "", redirectTo: "/login", pathMatch: "full" }, { path: "admin", component: AdminhomeComponent,children:[{path:"addpakage",
+  { path: "", redirectTo: "/userlogin", pathMatch: "full" }, { path: "admin", component: AdminhomeComponent,children:[{path:"addpakage",
 component:AddpakageComponent},{path:"viewpakage",component:ViewpakageComponent},{path:"abboutus",component:AboutusComponent},{path:"removepakage",
       component: RemovepakageComponent
-    }, { path: "updatepakage", component: UpdatepakageComponent}] },
+    }, { path: "updatepakage", component: UpdatepakageComponent }]
+  }, { path: "userlogin", component: UserloginComponent },
   {path:"**",component:PagenotfoundComponent}
  ];
 

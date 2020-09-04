@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { from } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormControl, FormGroup, Validators ,ReactiveFormsModule, FormBuilder} from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sineup',
   templateUrl: './sineup.component.html',
@@ -11,7 +12,7 @@ export class SineupComponent implements OnInit {
 
 
   
-  constructor( private http: HttpClient, private fb : FormBuilder  ) { }
+  constructor(private http: HttpClient, private fb: FormBuilder, private router: Router ) { }
   public sineupp = new FormGroup({
     username: new FormControl('', [Validators.required, Validators.minLength(2)
       , Validators.pattern('[a-zA-Z0-9]*')]), password: new FormControl('', [Validators.required, Validators.maxLength(20), Validators.minLength(8)]),
@@ -24,5 +25,6 @@ export class SineupComponent implements OnInit {
     let url = "http://localhost:3000/adduser";
     let data = this.sineupp.value;
      await this.http.post(url,data).toPromise();
+    this.router.navigate(['userlogin']);
   }
 }

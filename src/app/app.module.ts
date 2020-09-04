@@ -14,6 +14,11 @@ import { ViewpakageComponent } from './viewpakage/viewpakage.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { RemovepakageComponent } from './removepakage/removepakage.component';
 import { UpdatepakageComponent } from './updatepakage/updatepakage.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { UserhomeComponent } from './userhome/userhome.component';
+import { SelectpakageComponent } from './selectpakage/selectpakage.component';
+import { VivepakageComponent } from './vivepakage/vivepakage.component';
+import { ViveyourpakageComponent } from './viveyourpakage/viveyourpakage.component';
 
 
 @NgModule({
@@ -28,6 +33,11 @@ import { UpdatepakageComponent } from './updatepakage/updatepakage.component';
     AboutusComponent,
     RemovepakageComponent,
     UpdatepakageComponent,
+    UserloginComponent,
+    UserhomeComponent,
+    SelectpakageComponent,
+    VivepakageComponent,
+    ViveyourpakageComponent,
     
   ],
   imports: [

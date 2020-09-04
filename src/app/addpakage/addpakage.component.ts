@@ -15,7 +15,9 @@ export class AddpakageComponent implements OnInit {
   constructor(private http: HttpClient, private fb: FormBuilder) { }
   public addpakage = new FormGroup({
     PakageName: new FormControl('', [Validators.required]), PakagePrice: new FormControl('', [Validators.required]),
-    PakageFacelities: new FormControl('', [Validators.required])});
+    PakageFacelities: new FormControl('', [Validators.required]), Pakageid : new FormControl('', [Validators.required]),
+    Duraction : new FormControl('', [Validators.required])
+});
 
   ngOnInit(): void {
   }
