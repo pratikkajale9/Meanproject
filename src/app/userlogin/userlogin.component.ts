@@ -26,8 +26,8 @@ public login1 = new FormGroup({
     if (resultss.message === "success post") {
       this.alert = false;
       this.alert1 = true;
-     // sessionStorage.setItem('sid', 'true');
-     // this.router.navigate(['admin']);
+      sessionStorage.setItem('sid', 'true');
+      this.router.navigate(['userhome']);
     }
     if (resultss.message === "failure post") {
       this.alert1 = false;
